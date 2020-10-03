@@ -3,6 +3,7 @@ console.log('js');
 $(document).ready(onReady);
 
 let emInput = [];
+//let monthlySalaryCost = [];
 
 function onReady(){
     console.log('in onReady');
@@ -34,8 +35,14 @@ function submitEmInput(){
     //append information to the DOM. Where am I appending it too? 
     // for(let i = 0; i < emInput.length; i ++){
     // }    
-    $('#employeeList').append(`<li>` + employeeInput.firstName + ` ` + employeeInput.lastName + ` ` + employeeInput.id + ` ` + employeeInput.title + ` ` + employeeInput.annualSalary +  `</li>`);  // ${emInput[i]}.... use (this) here? target by employeeInfoTable id? or do I need individual ids for each row?
+    $('#employeeInfoTable').append(`<li>` + employeeInput.firstName + ` ` + employeeInput.lastName + ` ` + employeeInput.id + ` ` + employeeInput.title + ` ` + employeeInput.annualSalary +  `</li>`);  // ${emInput[i]}.... use (this) here? target by employeeInfoTable id? or do I need individual ids for each row?
     
+
+    for(let i =0; i < emInput.length; i++){
+        employeeInput.annualSalary ++;
+    }
+    let totalAnnualSalary = employeeInput.annualSalary ++; //this needs to add 
+    $('#totMonCost').append(totalAnnualSalary);
 
     $('#firstName').val('');
     $('#lastName').val('');
@@ -44,6 +51,22 @@ function submitEmInput(){
     $('#annualSalary').val('');
 
 }
+
+// function calculate(){
+
+    //loop through the array
+    //for each salary, add up total
+    //divide the total by 12 to get monthly budget
+
+
+//     let totalAnnualSalary = emInput.annualSalary ++;
+
+//     for(let i =0; i < emInput.length; i++){
+//         emInput.annualSalary ++;
+//     }
+//     $('#totMonCost').append(totalAnnualSalary);
+
+// }
 
 function deleteEmInput(){
     console.log('in deleteEmInput');
@@ -55,7 +78,7 @@ function deleteEmInput(){
 
 //store the information CHECK!
 //to calculate monthly costs, 
-//append information to the DOM 
+//append information to the DOM CHECK!
 //clear the input fields. CHECK!
 
 //Using the stored information, calculate monthly costs 
