@@ -1,0 +1,13 @@
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+    background-color: lightgrey;
+    
+}
+
+#submitEmInput{
+    float: right;
+}
