@@ -8,6 +8,7 @@ function onReady(){
     console.log('in onReady');
 
     $('#submitEmInput').on('click', submitEmInput);
+    $('.deleteEmInput').on('click', deleteEmInput);
 
 }
 
@@ -15,9 +16,9 @@ function submitEmInput(){
 
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
-    let id = $('#id').val();
+    let id = Number($( '#id' ).val());
     let title = $('#title').val();
-    let annualSalary = $('#annualSalary').val();
+    let annualSalary = Number($('#annualSalary').val());
 
     let employeeInput = {
         firstName: firstName,
@@ -31,9 +32,10 @@ function submitEmInput(){
     console.log('in submitEmInput', emInput);
 
     //append information to the DOM. Where am I appending it too? 
-    for(let i = 0; i < emInput.length; i ++){
-    $('#employeeInfoTable').append();  //is employeeInfoTable correct? or do I need ind ids for each row?
-    }
+    // for(let i = 0; i < emInput.length; i ++){
+    // }    
+    $('#employeeList').append(`<li>` + employeeInput.firstName + ` ` + employeeInput.lastName + ` ` + employeeInput.id + ` ` + employeeInput.title + ` ` + employeeInput.annualSalary +  `</li>`);  // ${emInput[i]}.... use (this) here? target by employeeInfoTable id? or do I need individual ids for each row?
+    
 
     $('#firstName').val('');
     $('#lastName').val('');
@@ -43,11 +45,11 @@ function submitEmInput(){
 
 }
 
-// // function deleteEmInput(){
-// //     console.log('in deleteEmInput');
-// //     $(this).parent()remove();
+function deleteEmInput(){
+    console.log('in deleteEmInput');
+    $(this).deleteEmInput.remove(); //figure out what goes here. employeeInput? emInput?
 
-// }
+}
 
 
 
