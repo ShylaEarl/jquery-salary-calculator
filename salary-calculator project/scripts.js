@@ -31,18 +31,19 @@ function submitEmInput(){
 
     emInput.push(employeeInput);
     console.log('in submitEmInput', emInput);
-
-    //append information to the DOM. Where am I appending it too? 
-    // for(let i = 0; i < emInput.length; i ++){
-    // }    
-    $('#employeeInfoTable').append(`<li>` + employeeInput.firstName + ` ` + employeeInput.lastName + ` ` + employeeInput.id + ` ` + employeeInput.title + ` ` + employeeInput.annualSalary +  `</li>`);  // ${emInput[i]}.... use (this) here? target by employeeInfoTable id? or do I need individual ids for each row?
+  
     
+    $('#employeeInfoTable').append(`
+        <tr>
+            <td>${employeeInput.firstName}</td>
+            <td>${employeeInput.lastName}</td>
+            <td>${employeeInput.id}</td>
+            <td>${employeeInput.title}</td>
+            <td>${employeeInput.annualSalary}</td>
+            <td><button class='deleteEmInput'>Delete</button></td>
+        </tr>`
+    );
 
-    for(let i =0; i < emInput.length; i++){
-        employeeInput.annualSalary ++;
-    }
-    let totalAnnualSalary = employeeInput.annualSalary ++; //this needs to add 
-    $('#totMonCost').append(totalAnnualSalary);
 
     $('#firstName').val('');
     $('#lastName').val('');
@@ -65,7 +66,6 @@ function submitEmInput(){
 //         emInput.annualSalary ++;
 //     }
 //     $('#totMonCost').append(totalAnnualSalary);
-
 // }
 
 function deleteEmInput(){

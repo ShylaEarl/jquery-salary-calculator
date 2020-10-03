@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <title>jquery salary calculator</title>
 </head>
+
 <body>
     <h1>Salary Calculator</h1>
     <h2>Add Employee</h2>
@@ -28,7 +29,7 @@
     </div>
 
     <h2>Employees</h2>
-    <table id='employeeInfoTable'>
+    <table >
         <thead>
             <tr>
                 <th>First Name</th> 
@@ -39,8 +40,8 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody >
-
+        <tbody id='employeeInfoTable'>
+            
         </tbody>
         <tfoot>
 
@@ -48,6 +49,8 @@
     </table>
 
     <h3 id='totalMonthlyCost'>Total Monthly Cost: $<span id='totMonCost'></span>TOTAL</h3>
+
+    <ul id='employeeList'></ul>
 
         <tr>
           <td></td>
@@ -81,8 +84,6 @@
             <td>Row5 cell5</td>
             <td><button class='deleteEmInput'>Delete</button></td>
           </tr>
-    
-      <ul id='employeeList'></ul>
     
 </body>
 </html>
