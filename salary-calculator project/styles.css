@@ -4,15 +4,37 @@ body{
 
 h1{
     text-align: center;
-    background-color: lightgrey;
-    
+    background-color: grey;
+    padding: 50px;
 }
 
 #submitEmInput{
     float: right;
 }
 
-#employeeInfoTable, tr, td{
-    border: 1px, solid, black;
+#employeeInfoTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-}
+    width: 100%;
+  }
+  
+  #employeeInfoTable td, #employeeInfoTable tr {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  #employeeInfoTable tr:nth-child(even){background-color: lightgrey;}
+  
+  #employeeInfoTable tr:hover {background-color: #ddd;}
+  
+  #employeeInfoTable tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color :#f2f2f2;
+    color: black;
+  }
+
+  #totalMonthlyCost{
+      float: right;
+  }

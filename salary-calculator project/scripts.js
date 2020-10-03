@@ -31,6 +31,9 @@ function submitEmInput(){
     console.log('in submitEmInput', emInput);
 
     //append information to the DOM. Where am I appending it too? 
+    for(let i = 0; i < emInput.length; i ++){
+    $('#employeeInfoTable').append();  //is employeeInfoTable correct? or do I need ind ids for each row?
+    }
 
     $('#firstName').val('');
     $('#lastName').val('');
@@ -40,16 +43,16 @@ function submitEmInput(){
 
 }
 
-function deleteEmInput(){
-    console.log('in deleteEmInput');
-    
+// // function deleteEmInput(){
+// //     console.log('in deleteEmInput');
+// //     $(this).parent()remove();
 
-}
+// }
 
-//employee first name, last name, ID number, job title, annual salary. CHECK!
 
-//A 'Submit' button should collect the form information, CHECK!
-//store the information to calculate monthly costs, CHECK!
+
+//store the information CHECK!
+//to calculate monthly costs, 
 //append information to the DOM 
 //clear the input fields. CHECK!
 
@@ -58,8 +61,19 @@ function deleteEmInput(){
 
 //If the total monthly cost exceeds $20,000, add a red background color to total monthly cost.
 
+//==============================================================
+
 //may need/want to create a table function 
 
-//let table = $('#create in html and add id here')
+// function createTable() {
+//     let table = document.getElementById("myTable");
+//     let row = table.insertRow(0);
+//     let cell1 = row.insertCell(0);
+//     let cell2 = row.insertCell(1);
+//     cell1.innerHTML = "NEW CELL1";
+//     cell2.innerHTML = "NEW CELL2";
+//   }
+
+//let table = $('#employeeInfoTable').
 //let row = table.insertRow(0);
 //let cell = row.insertcell();
