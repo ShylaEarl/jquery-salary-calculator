@@ -6,10 +6,12 @@ h1{
     text-align: center;
     background-color: grey;
     padding: 50px;
+    border-radius: 15px;
 }
 
 #submitEmInput{
     float: right;
+    background-color: lightgrey;
 }
 
 table, th, td, tfoot{
@@ -34,38 +36,14 @@ td{
     background-color: white;
 }
 
-
 input{
     margin-top: 5px;
 }
 
-#employeeInfoTable{
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #employeeInfoTable td, #employeeInfoTable tr {
-    border: 1px solid black;
-    padding: 8px;
-  }
-  
-  #employeeInfoTable tr:nth-child(even){background-color: lightgrey;}
-  
-  #employeeInfoTable tr:hover {background-color: #ddd;}
-  
-  #employeeInfoTable tr {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color :#f2f2f2;
-    color: black;
-  }
+#totalMonthlyCost{
+    float: right;
+}
 
-  #totalMonthlyCost{
-      float: right;
-  }
-
-  .redColor{
-      background-color: red;
-  }
+.redColor{
+    background-color: red;
+}
