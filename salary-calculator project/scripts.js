@@ -6,8 +6,6 @@ let emInput = [];
 //let monthlySalaryCost = [];
 
 function onReady(){
-    console.log('in onReady');
-
     $('#submitEmInput').on('click', submitEmInput);
     $('#employeeInfoTable').on('click', '#deleteEmInput', deleteEmInput);
 
@@ -30,9 +28,7 @@ function submitEmInput(){
     }
 
     emInput.push(employeeInput);
-    console.log('in submitEmInput', emInput);
   
-
     $('#employeeInfoTable').append(`
         <tr>
             <td>${employeeInput.firstName}</td>
@@ -43,7 +39,6 @@ function submitEmInput(){
             <td><button id='deleteEmInput'>Delete</button></td>
         </tr>`
     );
-
 
     $('#firstName').val('');
     $('#lastName').val('');
@@ -56,8 +51,10 @@ function submitEmInput(){
 // function calculate(){
 
     //loop through the array
-    //for each salary, add up total
+    // add up all salaries
     //divide the total by 12 to get monthly budget
+    //append montly budget to total monthly cost
+    // possibly add this function inside of submit button function 
 
 
 //     let totalAnnualSalary = emInput.annualSalary ++;
@@ -69,35 +66,11 @@ function submitEmInput(){
 // }
 
 function deleteEmInput(){
-    console.log('in deleteEmInput');
     $(this).parent().parent().remove();
 }
 
 
-
-//store the information CHECK!
-//to calculate monthly costs, 
-//append information to the DOM CHECK!
-//clear the input fields. CHECK!
-
-//Using the stored information, calculate monthly costs 
+//calculate monthly costs 
 //append this to the to DOM. 
 
 //If the total monthly cost exceeds $20,000, add a red background color to total monthly cost.
-
-//==============================================================
-
-//may need/want to create a table function 
-
-// function createTable() {
-//     let table = document.getElementById("myTable");
-//     let row = table.insertRow(0);
-//     let cell1 = row.insertCell(0);
-//     let cell2 = row.insertCell(1);
-//     cell1.innerHTML = "NEW CELL1";
-//     cell2.innerHTML = "NEW CELL2";
-//   }
-
-//let table = $('#employeeInfoTable').
-//let row = table.insertRow(0);
-//let cell = row.insertcell();
