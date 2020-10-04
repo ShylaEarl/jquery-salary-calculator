@@ -9,7 +9,7 @@ function onReady(){
     console.log('in onReady');
 
     $('#submitEmInput').on('click', submitEmInput);
-    $('.deleteEmInput').on('click', deleteEmInput);
+    $('#employeeInfoTable').on('click', '#deleteEmInput', deleteEmInput);
 
 }
 
@@ -32,7 +32,7 @@ function submitEmInput(){
     emInput.push(employeeInput);
     console.log('in submitEmInput', emInput);
   
-    
+
     $('#employeeInfoTable').append(`
         <tr>
             <td>${employeeInput.firstName}</td>
@@ -40,7 +40,7 @@ function submitEmInput(){
             <td>${employeeInput.id}</td>
             <td>${employeeInput.title}</td>
             <td>${employeeInput.annualSalary}</td>
-            <td><button class='deleteEmInput'>Delete</button></td>
+            <td><button id='deleteEmInput'>Delete</button></td>
         </tr>`
     );
 
@@ -70,8 +70,7 @@ function submitEmInput(){
 
 function deleteEmInput(){
     console.log('in deleteEmInput');
-    $(this).deleteEmInput.remove(); //figure out what goes here. employeeInput? emInput?
-
+    $(this).parent().parent().remove();
 }
 
 
