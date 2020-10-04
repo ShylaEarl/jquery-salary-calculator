@@ -65,3 +65,7 @@ input{
   #totalMonthlyCost{
       float: right;
   }
+
+  .redColor{
+      background-color: red;
+  }

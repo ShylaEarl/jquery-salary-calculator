@@ -7,7 +7,6 @@ let emInput = [];
 function onReady(){
     $('#submitEmInput').on('click', submitEmInput);
     $('#employeeInfoTable').on('click', '#deleteEmInput', deleteEmInput);
-
 }
 
 function submitEmInput(){
@@ -46,7 +45,6 @@ function submitEmInput(){
     $('#annualSalary').val('');
 
     calculate();
-
 }
 
 function calculate(){
@@ -62,15 +60,12 @@ function calculate(){
     let el = $('#totMonCost');
     el.empty();
     el.append( totalMonthlySalary );
-
+    
+    if( totalMonthlySalary > 20000){
+        el.addClass('redColor');
+    }
 }
 
 function deleteEmInput(){
     $(this).parent().parent().remove();
 }
-
-
-//calculate monthly costs 
-//append this to the to DOM. 
-
-//If the total monthly cost exceeds $20,000, add a red background color to total monthly cost.
