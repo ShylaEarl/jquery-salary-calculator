@@ -3,7 +3,6 @@ console.log('js');
 $(document).ready(onReady);
 
 let emInput = [];
-//let monthlySalaryCost = [];
 
 function onReady(){
     $('#submitEmInput').on('click', submitEmInput);
@@ -46,24 +45,25 @@ function submitEmInput(){
     $('#title').val('');
     $('#annualSalary').val('');
 
+    calculate();
+
 }
 
-// function calculate(){
+function calculate(){
 
-    //loop through the array
-    // add up all salaries
-    //divide the total by 12 to get monthly budget
-    //append montly budget to total monthly cost
-    // possibly add this function inside of submit button function 
+    let totalAnnualSalary = 0;
+    
+    for(let i =0; i < emInput.length; i++){
+        totalAnnualSalary +=  emInput[i].annualSalary;
 
+    }
 
-//     let totalAnnualSalary = emInput.annualSalary ++;
+    let totalMonthlySalary = totalAnnualSalary / 12;
+    let el = $('#totMonCost');
+    el.empty();
+    el.append( totalMonthlySalary );
 
-//     for(let i =0; i < emInput.length; i++){
-//         emInput.annualSalary ++;
-//     }
-//     $('#totMonCost').append(totalAnnualSalary);
-// }
+}
 
 function deleteEmInput(){
     $(this).parent().parent().remove();
