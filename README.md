@@ -1,9 +1,14 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+jquery-salary-calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Duration: Weekend Challenge
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This application tracks company employees, by name and Id number, their annual salary, and calculates the total monthly cost of all employee salaries. If the monthly employee salary cost is above $20,000 a red indicator is triggered. 
+
+This application allows the company to track and calculate monthly employee salary expenses and indicates when those expenses exceed $20,000.
+
+
+
